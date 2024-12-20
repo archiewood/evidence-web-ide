@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Token colors for syntax highlighting */
+.token.comment { @apply text-[#6a9955] !important; }
+.token.keyword { @apply text-[#569cd6] !important; }
+.token.string { @apply text-[#ce9178] !important; }
+.token.function { @apply text-[#dcdcaa] !important; }
+.token.text { @apply text-[#dcdcaa] !important; }
+.token.number { @apply text-[#b5cea8] !important; }
+.token.punctuation { @apply text-[#808080] !important; }
+.token.important { 
+  @apply text-[#569cd6] font-bold !important;
+}
+.token.url { @apply bg-transparent !important; }
+.token.tag { @apply text-[#4EC9B0] !important; }
+
+/* Common utility classes */
+@layer components {
+  .editor-container {
+    @apply h-full w-full bg-[#1e1e1e] text-[#d4d4d4] font-mono relative;
+  }
+  
+  .preview-container {
+    @apply h-full w-full bg-white p-4 overflow-y-auto;
+  }
+}
+
+pre.language-sql {
+  @apply bg-gray-100 border text-xs text-gray-700 !important;
+}
